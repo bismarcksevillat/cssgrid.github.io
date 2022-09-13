@@ -1,0 +1,106 @@
+:root {
+  --red: #e74c2a;
+  --gray: #a9b8a3;
+  --yellow: #fbd630;
+  --almond: #f6ebbd;
+  --light-almond: #faf0c8;
+  --black: #000;
+  --blue: #103a61;
+}
+
+body {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  position: relative;
+  width: 90%;
+  max-width: 650px;
+  margin: 0 auto;
+  height: auto;
+  background: black;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 50% 47%;
+  row-gap: 2.85%;
+  column-gap: 3%;
+  overflow: hidden;
+}
+
+.frame {
+  position: relative;
+  display: grid;
+  overflow: hidden;
+}
+
+.frame > .square {
+    filter: blur(1px);
+}
+
+.frame.first {
+    grid-template-rows: 12.5% 81.8%;
+    row-gap: 5.7%;
+}
+
+.frame.first > .square {
+    background-image: linear-gradient(to right, rgba(231, 76, 42, 1), rgba(231, 76, 42, 0.8) 90%);
+}
+
+.frame.second {
+    grid-template-columns: 65% 29%;
+    column-gap: 6%;
+}
+
+.frame.second > .square:nth-child(1) {
+    background-image: linear-gradient(to bottom, var(--gray), var(--almond) 60%);
+}
+
+.frame.second > .square:nth-child(2) {
+    background: var(--yellow);
+}
+
+.frame.third {
+    grid-template-columns: 16% 78%;
+    grid-template-rows: 85% 9.3%;
+    column-gap: 6%;
+    row-gap: 5.7%;
+}
+
+.frame.third > .square:nth-child(1) {
+    background: var(--light-almond);
+}
+
+.frame.third > .square:nth-child(2) {
+    background: var(--almond);
+}
+
+.frame.third > .square:nth-child(3) {
+    background-image: linear-gradient(to right, var(--light-almond), var(--gray));
+    grid-column: 1 / span 2;
+}
+
+.frame.fourth {
+    grid-template-rows: 65% 29.3%;
+    row-gap: 5.7%;
+    grid-template-columns: 65% 29%;
+    column-gap: 6%;
+}
+
+.frame.fourth > .square:nth-child(1) {
+    background: var(--light-almond);
+}
+
+.frame.fourth > .square:nth-child(2) {
+    background: var(--black);
+}
+
+.frame.fourth > .square:nth-child(3) {
+    background: var(--blue);
+    grid-column: 1 / span 2;
+}
+
